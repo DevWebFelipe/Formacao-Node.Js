@@ -1,27 +1,26 @@
 import http from 'node:http'
 
+const users = []
+
 const server = http.createServer((request, response) => {
   const { method, url } = request
 
-  //console.log(method, url)
-  if (method === 'GET' && url === '/users') {
-    return response.end('Listagem de usuário')
-  } 
+  console.log(request.headers)
 
-  if (method === 'PUT' && url === '/users') {
-    return response.end('Alteração completa de usuário')
+  if (method === 'GET' && url === '/users') {
+    return response
+      .setHeader('Content-type', 'application/json')
+      .end(JSON.stringify(users))
   }
 
   if (method === 'POST' && url === '/users') {
-    return response.end('Inserido usuário')
-  }
+    users.push({
+      id: 1,
+      nome: 'Felipe Teixeira',
+      email: 'felipe.flptxr@gmail.com'
+    })
 
-  if (method === 'PATCH' && url === '/users') {
-    return response.end('Alteração parcial de usuário')
-  }
-
-  if (method === 'DELETE' && url === '/users') {
-    return response.end('Exclusão de usuário')
+    return response.end('Usuário inserido com sucesso')
   }
 
   return response.end('Server rodando corretamente!')
