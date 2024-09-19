@@ -1,11 +1,9 @@
 import http from 'node:http'
-
+//    https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 const users = []
 
 const server = http.createServer((request, response) => {
   const { method, url } = request
-
-  console.log(request.headers)
 
   if (method === 'GET' && url === '/users') {
     return response
@@ -20,10 +18,10 @@ const server = http.createServer((request, response) => {
       email: 'felipe.flptxr@gmail.com'
     })
 
-    return response.end('Usuário inserido com sucesso')
+    return response.writeHead(201).end()
   }
 
-  return response.end('Server rodando corretamente!')
+  return response.writeHead(404).end()
 })
 
 server.listen(3333)
