@@ -1,0 +1,12 @@
+const buf = Buffer.from("ok")
+const buf1 = Buffer.from("Ok")
+const buf2 = Buffer.from("Hello")
+
+console.log()
+console.log("ok ----->", buf)
+console.log("Ok ----->", buf1)
+console.log("Hello -->", buf2)
+console.log()
+console.log("ok ----->", buf.toJSON())
+console.log("Ok ----->", buf1.toJSON())
+console.log("Hello -->", buf2.toJSON())
