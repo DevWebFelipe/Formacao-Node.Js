@@ -1,8 +1,6 @@
-// process.stdin
-//   .pipe(process.stdout)
+import { Readable, Writable, Transform } from 'node:stream'
 
-import {Readable} from 'node:stream'
-
+// Leu o numero
 class OneToHundredStream extends Readable {
   index = 1
   _read() {
@@ -16,16 +14,26 @@ class OneToHundredStream extends Readable {
         this.push(buf)
       }
     }, 1000)
+  }
+}
 
-    // if (i > 100) {
-    //   this.push(null)
-    // } else {
-    //   const buf = Buffer.from(String(i))
+// Alterou o valor do número para negativo
+class InverseNumberStream extends Transform {
+  _transform(chunk, encoding, callback) {
+    const transformed = (Number(chunk.toString()) * -1)
 
-    //   this.push(buf)
-    // }
+    callback(null, Buffer.from(String(transformed)))
+  }
+}
+
+// Escreveu o número multiplicado por 10
+class MultiplyByTenStream extends Writable {
+  _write(chunk, encoding, callback) {
+    console.log(Number(chunk.toString()) * 10)
+    callback()
   }
 }
 
 new OneToHundredStream()
-  .pipe(process.stdout)
+  .pipe(new InverseNumberStream())
+  .pipe(new MultiplyByTenStream())
