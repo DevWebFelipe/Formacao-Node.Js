@@ -1,7 +1,8 @@
 import http from 'node:http'
 import { json } from './middlewares/json.js'
-//    https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-const users = []
+import { Database } from './database.js'
+
+const database = new Database()
 
 const server = http.createServer(async (request, response) => {
   const { method, url } = request
@@ -11,24 +12,21 @@ const server = http.createServer(async (request, response) => {
   console.log(request.body)
 
   if (method === 'GET' && url === '/users') {
-    return response
-      .end(JSON.stringify(users))
+    const users = database.select('users')
+
+    return response.end(JSON.stringify(users))
   }
 
   if (method === 'POST' && url === '/users') {
     const { name, email } = request.body
 
-    users.push({
+    const user = {
       id: 1,
       name,
       email,
-    })
+    }
 
-     users.push({
-       id: 2,
-       nome: 'Felipe Teixeira',
-       email: 'felipe.flptxr@gmail.com'
-     })
+    database.insert('users', user)
 
     return response.writeHead(201).end()
   }
