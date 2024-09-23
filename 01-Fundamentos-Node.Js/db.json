@@ -1,14 +1,1 @@
-{
-  "users": [
-      {
-          "id": "02254f3a-5add-4a72-9a60-e9d5df2cc3a8",
-          "name": "Giulia Gabrielle",
-          "email": "giulia@gmail.com.br"
-      },
-      {
-          "id": "dfcf994f-f5bc-43d3-9007-ade1eb06e56c",
-          "name": "Felipe Texeira",
-          "email": "felipe.flptxr@gmail.com.br"
-      }
-  ]
-}
+{"users":[{"id":"02254f3a-5add-4a72-9a60-e9d5df2cc3a8","name":"Giulia Gabrielle","email":"giulia@gmail.com.br"},{"id":"dfcf994f-f5bc-43d3-9007-ade1eb06e56c","name":"Felipe Texeira","email":"felipe.flptxr@gmail.com.br"},{"id":"18390de8-b9ca-4a75-8571-0655f504732b","name":"Isis Gabrielle Texeira","email":"isis.gabrielle@gmail.com.br"}]}
