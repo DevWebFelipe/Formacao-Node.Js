@@ -2,6 +2,19 @@ import http from 'node:http'
 import { json } from './middlewares/json.js'
 import { routes } from './routes.js'
 
+// Query Parameters: Usado em URL Stateful => Filtros, paginação....
+// Ex: http://localhost:3333/users?userId=2&name=Felipe
+
+// Route Parameters: Identificação de recurso
+// Ex: http://localhost:3333/users/1
+
+// Rquest Body: Envio de dados sensíveis, dados de formulários (HTTPS1)
+// Ex: http://localhost:3333/users
+//     {
+//        "name":"Giulia Gabrielle",
+//        "email":"giulia@gmail.com.br"
+//     }
+
 const server = http.createServer(async (request, response) => {
   const { method, url } = request
 
@@ -14,8 +27,7 @@ const server = http.createServer(async (request, response) => {
   if (route) {
     return route.handler(request, response)
   }
-  //console.log(route)
-
+  
   return response.writeHead(404).end()
 })
 
