@@ -28,7 +28,14 @@ app.listen({
 -> Configurar com pacote da rocketSeat 'npm i eslint @rocketseat/eslint-config -D'
 -> Criar arquivo '.eslintrc.json' na raiz do projeto 
 {
-    "extends": [
+    "extends":[
         "@rocketseat/eslint-config/node"
+    ],
+    "rules": {"prettier/prettier": [
+        "error",
+        {
+            "endOfLine": "auto"
+        }
     ]
+}
 }
