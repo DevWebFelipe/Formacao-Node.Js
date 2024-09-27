@@ -5,3 +5,11 @@ fastify              -> 'npm i fastify'
 ler ts com node      -> 'npm install -D @types/node'
 converter ts para js -> 'npm install tsx -D'
 eslint da rocket     -> 'npm i eslint @rocketseat/eslint-config -D'
+instalar knex        -> 'npm i knex'
+iniciar knex         -> 'npx knex init'
+instalar dive do db  -> 'npm install knex sqlite3'
+
+
+criar migration      -> 'npm run knex -- migrate:make nome-migrate -x ts'
+refazer ultimo mig   -> 'npm run knex -- migrate:latest'
+reverter ultima mig  -> 'npm run knex -- migrate:rollback'
