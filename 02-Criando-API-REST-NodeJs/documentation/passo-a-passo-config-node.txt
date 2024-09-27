@@ -1,0 +1,34 @@
+-> Criar um pasta 'raiz' que vai contar todo o projeto
+-> Abrir essa pasta no VSCode
+-> Abrir o integrated terminal nessa pasta
+-> Rodar o comando 'npm init -y' no terminal
+-> - O arquivo criado 'package.json' será a configuração do node nesse projeto
+-> - -Dentro do 'package.json', embaiso da chave "name" adicionar uma chave "type" com valor "module"
+-> Instalar o typescript 'npm i typescript'
+-> Iniciar o typescript 'npx tsc --init'
+-> Instalar o fastify 'npm i fastify'
+-> Instalar o pacote de tipagem 'npm install -D @types/node'
+-> Criar uma pasta chamada 'src'
+-> - Criar um arquivo chamado 'server.ts'
+-> - - Dentro do 'server.ts' importar o fastify 'import fastify from 'fastify'
+-> - - Criar uma constante 'const app = fastify()'
+-> Ouvir a porta 3333 
+app.listen({
+    port: 3333
+}).then(() => {
+    console.log('HTTP Server Running!')
+})
+-> Converter o server.ts para server.js 'npx tsc src/server.ts'
+-> Rodar o server.ts 'node src/server.js'
+-> Automatizar o presso de transformação de TS para JS
+-> - Instalar o tsx 'npm install tsx -D'
+-> Executar 'npx tsx src/server.ts'
+-> Automatizar com 'npm run dev' -> Packege.json '"dev": "tsx src/server.ts"'
+-> Configurar o ESLint 'npm i eslint -D'
+-> Configurar com pacote da rocketSeat 'npm i eslint @rocketseat/eslint-config -D'
+-> Criar arquivo '.eslintrc.json' na raiz do projeto 
+{
+    "extends": [
+        "@rocketseat/eslint-config/node"
+    ]
+}
