@@ -1,0 +1,7 @@
+iniciar o npm        -> 'npm init -y'
+instalar o ts        -> 'npm i -D typescript'
+arquivo de config ts -> 'npx tsc --init'
+fastify              -> 'npm i fastify'
+ler ts com node      -> 'npm install -D @types/node'
+converter ts para js -> 'npm install tsx -D'
+eslint da rocket     -> 'npm i eslint @rocketseat/eslint-config -D'
