@@ -1,5 +1,6 @@
 iniciar o npm        -> 'npm init -y'
 instalar o ts        -> 'npm i -D typescript'
+instalar o ts-node   -> 'npm install -D ts-node'
 arquivo de config ts -> 'npx tsc --init'
 fastify              -> 'npm i fastify'
 ler ts com node      -> 'npm install -D @types/node'
