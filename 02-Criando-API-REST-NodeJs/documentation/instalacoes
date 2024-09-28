@@ -12,5 +12,6 @@ instalar dive do db  -> 'npm install knex sqlite3'
 
 
 criar migration      -> 'npm run knex -- migrate:make nome-migrate -x ts'
-refazer ultimo mig   -> 'npm run knex -- migrate:latest'
+executar ultimo mig  -> 'npm run knex -- migrate:latest'
 reverter ultima mig  -> 'npm run knex -- migrate:rollback'
+adicionar algo a tab -> 'npm run knex -- migrate:make add-session-id-to-transactions'

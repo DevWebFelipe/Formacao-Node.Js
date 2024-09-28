@@ -3,7 +3,6 @@
 -> Abrir o integrated terminal nessa pasta
 -> Rodar o comando 'npm init -y' no terminal
 -> - O arquivo criado 'package.json' será a configuração do node nesse projeto
--> - -Dentro do 'package.json', embaiso da chave "name" adicionar uma chave "type" com valor "module"
 -> Instalar o typescript 'npm i typescript'
 -> Iniciar o typescript 'npx tsc --init'
 -> Instalar o fastify 'npm i fastify'
