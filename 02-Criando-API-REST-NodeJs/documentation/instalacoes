@@ -9,6 +9,8 @@ eslint da rocket     -> 'npm i eslint @rocketseat/eslint-config -D'
 instalar knex        -> 'npm i knex'
 iniciar knex         -> 'npx knex init'
 instalar dive do db  -> 'npm install knex sqlite3'
+instalar dotEnv      -> 'npm i dotenv'
+validacao de dados   -> 'npm i zod'
 
 
 criar migration      -> 'npm run knex -- migrate:make nome-migrate -x ts'
