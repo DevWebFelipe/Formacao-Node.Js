@@ -3,11 +3,17 @@ import { z } from "zod";
 import { knex } from "../database";
 import crypto, { randomUUID } from "node:crypto";
 import { checkSessionIdExists } from "../middlewares/check-session-id-exists";
-
+// import { requestLog } from "../middlewares/request-log";
 // Cookies -> Formas de matermos contexto entre requisições
 //
 
 export async function transactionRoutes(app: FastifyInstance) {
+  // Vai ser executado em todas as rotas DESTE plugin
+  // app.addHook("preHandler", async (request) => {
+  //   console.log(`[${request.method}] ${request.url}`);
+  // });
+  // app.addHook("preHandler", requestLog);
+
   app.get(
     "/",
     {
