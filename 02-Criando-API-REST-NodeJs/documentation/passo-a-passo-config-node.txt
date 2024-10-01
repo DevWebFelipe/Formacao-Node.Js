@@ -38,3 +38,4 @@ app.listen({
     ]
 }
 }
+-> Para trabalhar com cookies, pode-se instalar o 'npm i @fastify/cookie'

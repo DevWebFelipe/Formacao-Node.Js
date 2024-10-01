@@ -11,6 +11,8 @@ iniciar knex         -> 'npx knex init'
 instalar dive do db  -> 'npm install knex sqlite3'
 instalar dotEnv      -> 'npm i dotenv'
 validacao de dados   -> 'npm i zod'
+gerenciando cookies  -> 'npm i @fastify/cookie'
+
 
 
 criar migration      -> 'npm run knex -- migrate:make nome-migrate -x ts'
