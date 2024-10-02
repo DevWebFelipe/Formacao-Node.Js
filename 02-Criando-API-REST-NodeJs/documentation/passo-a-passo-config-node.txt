@@ -41,4 +41,6 @@ app.listen({
 -> Para trabalhar com cookies, pode-se instalar o 'npm i @fastify/cookie'
 -> Biblioteca para rodar testes automatizados 'npm i vitest -D'
 -> Em package.json, configurar um novo script "test": "npx vitest"
--> - Chamar no terminal npm run test
+-> - Chamar no terminal 'npm run test' ou apenas 'npm test'
+-> Instalar biblicoteca para auxiliar no gerenciamento de servidor de teste/desenvolvimento 'npm i supertest -D'
+-> Supertest foi feito em Js, então, para rodar no node com Ts, precisa instalar o types dele 'npm i --save-dev @types/supertest'

@@ -13,6 +13,8 @@ instalar dotEnv      -> 'npm i dotenv'
 validacao de dados   -> 'npm i zod'
 gerenciando cookies  -> 'npm i @fastify/cookie'
 vitest para teste    -> 'npm i vitest -D'
+servidor teste node  -> 'npm i supertest -D'
+ts supertest         -> 'npm i --save-dev @types/supertest'
 
 
 
