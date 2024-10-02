@@ -1,7 +1,7 @@
 import fastify from "fastify";
 import cookie from "@fastify/cookie";
 import { transactionRoutes } from "./routes/transactions";
-import { requestLog } from "./middlewares/request-log";
+// import { requestLog } from "./middlewares/request-log";
 
 export const app = fastify();
 
@@ -9,11 +9,11 @@ export const app = fastify();
 app.register(cookie);
 
 // vai ser executado para todas as rotas de todos os plugins
-app.addHook("preHandler", requestLog);
+// app.addHook("preHandler", requestLog);
 
-app.get("/hello", () => {
-  return "Hello world!";
-});
+// app.get("/hello", () => {
+//  return "Hello world!";
+// });
 
 app.register(transactionRoutes, {
   prefix: "transactions",
