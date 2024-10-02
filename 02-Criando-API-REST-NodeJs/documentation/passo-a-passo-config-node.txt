@@ -39,3 +39,6 @@ app.listen({
 }
 }
 -> Para trabalhar com cookies, pode-se instalar o 'npm i @fastify/cookie'
+-> Biblioteca para rodar testes automatizados 'npm i vitest -D'
+-> Em package.json, configurar um novo script "test": "npx vitest"
+-> - Chamar no terminal npm run test

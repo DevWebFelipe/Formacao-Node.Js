@@ -12,6 +12,7 @@ instalar dive do db  -> 'npm install knex sqlite3'
 instalar dotEnv      -> 'npm i dotenv'
 validacao de dados   -> 'npm i zod'
 gerenciando cookies  -> 'npm i @fastify/cookie'
+vitest para teste    -> 'npm i vitest -D'
 
 
 
@@ -19,3 +20,5 @@ criar migration      -> 'npm run knex -- migrate:make nome-migrate -x ts'
 executar ultimo mig  -> 'npm run knex -- migrate:latest'
 reverter ultima mig  -> 'npm run knex -- migrate:rollback'
 adicionar algo a tab -> 'npm run knex -- migrate:make add-session-id-to-transactions'
+
+executar testes      -> 'npx vitest'

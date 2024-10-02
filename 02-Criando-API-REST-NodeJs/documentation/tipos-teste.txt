@@ -1,0 +1,33 @@
+Para teste, será usado a ferramenta vitest.dev
+
+- unitários
+
+Testam exclusivamente uma unidade da aplicação, ou seja uma pequena parte isolada do código
+como por exmeplo uma função que retorna uma data
+Ou seja, não se testa onde essa função está sendo chamada, mas apenas ela isoladamente
+
+- integração
+
+Teste de comunicação entre 2 ou mais unidades, como por exemplo uma função que fecha uma venda
+e chama outra funções, para carregar os itens da venda, carregar os pagamentos, baixar o estoque
+gerar o financeiro, testa todas as funções integradas numa mesma rotina
+
+- e2e (end to end, ponta a ponta)
+
+Simula um usário operando na aplicação, testa rotinas por completo, de ponta a ponta, basicamente
+seria como no item acima, mas aí pegaria desde o momento de selecionar os itens, ir para o carrinho
+finalizar a compra, selecionar o meio de pagamento etc...
+
+No front-end: Simularia a abertura da tela de login, inserção do usuário, senha, tudo de forma
+programada e automatizada, cliques nos botões necessários para executar determinada rotina etc...
+No back-end: Fazem chamadas HTTP, websockets, enfim, camadas que se comunicam com o front
+
+Em resumo, testa realmente tudo, desde o funcionamento da tela em si até o resultado inserido
+no banco de dados
+
+Pirâmede de testes, pesquisar sobre
+
+Pirâmede de testes: E2E (não dependem de nenhuma tecnologia, não depeden de arquitetura)
+
+Porém, embora sejam os testes mais simples e completos, eles são lentos pois passam por todos os 
+processos, então deve ser analisado quando é melhor usar cada um dos tipos de teste
