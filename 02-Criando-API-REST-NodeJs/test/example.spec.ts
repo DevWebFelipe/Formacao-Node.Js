@@ -11,15 +11,6 @@ afterAll(async () => {
 });
 
 test("user can create a new transaction", async () => {
-  // fazer a chamada HTTP para criar uma nova transação
-  // const response = await request(app.server).post("/transactions").send({
-  //   title: "Freelancer",
-  //   amount: 8000,
-  //   type: "credit",
-  // });
-  // validar se o registro foi inserido no banco
-  // expect(response.statusCode).toEqual(201);
-  // outra forma de fazer, fazendo direto
   await request(app.server)
     .post("/transactions")
     .send({
