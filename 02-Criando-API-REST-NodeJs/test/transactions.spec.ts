@@ -18,7 +18,7 @@ describe("Transactions routes", () => {
   });
 
   it("should be able to create a new transaction", async () => {
-    const response = await request(app.server)
+    await request(app.server)
       .post("/transactions")
       .send({
         title: "Freelancer",
@@ -26,12 +26,6 @@ describe("Transactions routes", () => {
         type: "credit",
       })
       .expect(201);
-
-    console.log("_________________________________________");
-    console.log(response.headers);
-    console.log("_________________________________________");
-    console.log(response.get("Set-Cookie"));
-    console.log("_________________________________________");
   });
 
   it("should be able to list all transactions", async () => {
@@ -45,16 +39,10 @@ describe("Transactions routes", () => {
 
     const cookies = createTransactionResponse.get("Set-Cookie");
 
-    console.log("_________________________________________");
-    console.log(cookies);
-    console.log("_________________________________________");
-
     const listTransactionsResponse = await request(app.server)
       .get("/transactions")
       .set("Cookie", String(cookies))
       .expect(200);
-
-    console.log(listTransactionsResponse.body);
 
     expect(listTransactionsResponse.body.transactions).toEqual([
       expect.objectContaining({
@@ -63,5 +51,67 @@ describe("Transactions routes", () => {
         type: "credit",
       }),
     ]);
+  });
+
+  it("should be able to get the summary", async () => {
+    const createTransactionResponse = await request(app.server)
+      .post("/transactions")
+      .send({
+        title: "Freelancer",
+        amount: 8000,
+        type: "credit",
+      });
+
+    const cookies = createTransactionResponse.get("Set-Cookie");
+
+    const listTransactionsResponse = await request(app.server)
+      .get("/transactions")
+      .set("Cookie", String(cookies))
+      .expect(200);
+
+    const transactionId = listTransactionsResponse.body.transactions[0].id;
+
+    const getTransactionResponse = await request(app.server)
+      .get(`/transactions/${transactionId}`)
+      .set("Cookie", String(cookies))
+      .expect(200);
+
+    expect(getTransactionResponse.body.transaction).toEqual(
+      expect.objectContaining({
+        title: "Freelancer",
+        amount: 8000,
+        type: "credit",
+      }),
+    );
+  });
+
+  it("should be able to list all transactions", async () => {
+    const createTransactionResponse = await request(app.server)
+      .post("/transactions")
+      .send({
+        title: "Freelancer",
+        amount: 8000,
+        type: "credit",
+      });
+
+    const cookies = createTransactionResponse.get("Set-Cookie");
+
+    await request(app.server)
+      .post("/transactions")
+      .set("Cookie", String(cookies))
+      .send({
+        title: "Custs of operation",
+        amount: 4000,
+        type: "debit",
+      });
+
+    const summaryResponse = await request(app.server)
+      .get("/transactions/summary")
+      .set("Cookie", String(cookies))
+      .expect(200);
+
+    expect(summaryResponse.body.summary).toEqual({
+      amount: 4000,
+    });
   });
 });
