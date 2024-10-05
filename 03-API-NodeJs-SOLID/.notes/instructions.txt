@@ -2,8 +2,9 @@
 
 002 -> ('install-packages - 001') Iniciar um projeto node 
 
-003 -> Criar uma pasta 'src' para
- 01 -> Criar um arquivo 'server.ts'
+003 -> Criar uma pasta 'src' para para servir de container para aplicação
+ 01 -> Criar um arquivo 'src/server.ts'
+ 02 -> Criar um arquivo 'src/app.ts'
 
 004 -> ('install-packages - 002') Instalar as bibliotecas inicias necessárias para o projeto 
 
@@ -15,17 +16,24 @@
 
 007 -> ('install-packages - 004') Instalar a biblioteca 'fastify' para gerenciar as rotas da aplicação
 
-008 -> Dividir a aplicação em 2 arquivos, criando o arquivo 'app.ts'
-
-009 -> Configurar o 'package.json'
+008 -> Configurar o 'package.json'
  01 -> ('package.json') Configurar o script para rodar o servivdor ('command script 01')
  02 -> ('package.json') Configurar o script para rodar o build de TS para JS ('command script 02')
  03 -> ('package.json') Configurar o script para rodar o server a partir do build ('command script 03')
 
-010 -> Criar arquivo para configurar '.npmrc' o npm
+009 -> Criar arquivo para configurar '.npmrc' o npm
  01 -> Configurar arquivo com 'save-exact=true'
   -> Reinstalar as dependências ('install-packages - 002/004')
   -> Isso vai ficar a versão da dependência instalada, nas próximas instalações 'npm i' ou 'npm install' vai ficar a 
   mesma versão da dependência que já estava
   
-
+010 -> Configurar variáveis de ambiente
+ 01 -> Criar um arquivo '.env' (adicionar no .gitignore) (informar valores reais)
+  1 -> Adicionar a variável 'NODE_ENV=dev'
+ 02 -> Criar um arquivo '.env.example' (não adicionar no .gitignore) (informar valores fictícios como exemplos)
+  1 -> Adicionar a variável 'NODE_ENV=dev'
+ 03 -> ('install-package 005) Instalar biblioteca que vai carregar as variáveis de ambiente
+ 04 -> Criar pasta 'src/env'
+ 05 -> Criar aquivo 'src/env/index.ts'
+ 06 -> ('install-package 006) Instalar a biblioteca zod
+  1 -> Restante da configuração em 'configure-variables.txt'

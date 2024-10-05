@@ -1,0 +1,37 @@
+- importar variáveis de ambiente
+  import 'dotenv/config'
+
+- importar o 'zod' para validar variáveis de ambiente
+  import { z } from 'zod'
+
+as variáveis estão dentro de um objeto
+  process.env: {
+    NODE_ENV: 'dev',
+    ...
+  }
+
+- criar um objeto para receber as variáveis de 'process.env' e poder tratar cada uma
+  const envSchema = z.object({
+    NODE_ENV: z.enum(['dev', 'test', 'production']).default('dev'),
+    PORT: z.coerce.number().default(3333), -> SEMPRE CONTER, pois em algumas hospedagens, a porta será setada automaticamente nessa variável, mesmo que não exista em .env
+    ...
+  })
+
+- criar uma constante para receber os valores das variáveis de process.env
+  const _env = envSchema.safeParse(process.env)
+
+- _env ao receber os valores de process env, também vai receber o valor para 'sucess' que caso seja false
+significa que não foi possível carregar as variáveis de .env, pode ser que alguma esteja preechida com valor incorreto
+ou que não exista em .env, então precisa criar uma validação para ver se ao preencher o objeto envSchema, teve sucesso
+  if (_env.success === false) {
+    console.error('Invalid environment variables', _env.error.format())
+
+    throw new Error('Invalid environment variables') -> daqui para baixo, se houve erro, não irá executar mais nada e encerrará a aplicação
+  }
+
+- por fim, se tudo correu corretamente, basta exportar os dados da variável _env para que possam ser usados de qualquer 
+outro lugar
+  export const env = _env.data
+
+- para testar se tudo ficou certo, basta ir em src/server.ts e trocar a porta pela variável env.PORT, importando o .env
+(cuidar para não importar de dentro do process), depois disso, basta executar o server ('command TERMINAL 01)
