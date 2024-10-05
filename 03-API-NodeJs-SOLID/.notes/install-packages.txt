@@ -1,0 +1,4 @@
+001 - iniciar um projeto node      -> 'npm initi -y'
+002 - instalar bibliotecas básicas -> 'npm i typescript @types/node tsx tsup -D'
+003 - iniciar um projeto ts        -> 'npx tsc --init'
+004 - instalar o fastify           -> 'npm i fastify'

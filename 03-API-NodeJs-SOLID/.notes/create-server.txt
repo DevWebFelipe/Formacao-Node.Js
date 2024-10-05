@@ -1,0 +1,16 @@
+*** app.ts ***
+  importar o fastify
+  - import fastify from "fastify";
+  exportar uma constante da aplicação do fastify
+  - export const app = fastify();
+
+*** server.ts ***
+  importar o app exportado de app.ts
+  - import { app } from "./app";
+  criar e configurar o método app.listen
+  - app.listen({
+      host: '0.0.0.0',   -> (MUITO IMPORTANTE) no render.com, sem isso não acha a porta para configurar o server
+      port: 3333         -> porta onde rodará o server
+    }).then(() => {
+      console .log("HTTP Server Running!");   -> apenas para testar se o server rodou corretamente
+    })
