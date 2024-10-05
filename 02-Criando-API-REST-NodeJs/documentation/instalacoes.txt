@@ -24,3 +24,6 @@ adicionar algo a tab -> 'npm run knex -- migrate:make add-session-id-to-transact
 executar testes      -> 'npx vitest'
 
 converter TS para JS -> 'npm i tsup -D'
+testar server conver -> 'node build/server.js'
+
+instalar driver pg   -> 'npm i pg'
