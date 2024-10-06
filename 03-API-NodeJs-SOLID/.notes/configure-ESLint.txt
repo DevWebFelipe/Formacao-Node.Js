@@ -1,0 +1,26 @@
+- Instalar a extensão eslint no VSCode caso não tenha
+
+- Instalar o ESLint com as configurações da rocketseat
+  npm i eslint @rocketseat/eslint-config -D
+
+- Criar arquivo na raiz do projeto '.eslintcr.json'
+  Colocar o seguinte código
+  {
+    "extends":[
+        "@rocketseat/eslint-config/node"
+    ],
+    "rules": {"prettier/prettier": [
+        "error",
+        {
+            "endOfLine": "auto"
+        }
+    ]}
+  }
+
+- Criar arquivo na raiz do projeto '.exlintignore'
+  Colocar as seguintes pastas
+  node_modules
+  build
+
+- Depois de configurar tudo, é bom reiniciar o VSCode
+  ctrl + shift + p -> Reload window

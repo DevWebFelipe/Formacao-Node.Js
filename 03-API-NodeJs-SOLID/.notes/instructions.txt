@@ -37,3 +37,5 @@
  05 -> Criar aquivo 'src/env/index.ts'
  06 -> ('install-package 006) Instalar a biblioteca zod
   1 -> Restante da configuração em 'configure-variables.txt'
+
+011 -> Configurar o ESLint, como é feito 1 vez só por projeto, toda a config está no 'configure-ESLint.txt'
