@@ -39,3 +39,6 @@
   1 -> Restante da configuração em 'configure-variables.txt'
 
 011 -> Configurar o ESLint, como é feito 1 vez só por projeto, toda a config está no 'configure-ESLint.txt'
+
+012 -> Configurar aliasses para importação de arquivos
+ 01 -> Dentro de 'tsconfig.json' fazer as seguintes configurações ('aliases-path.txt')

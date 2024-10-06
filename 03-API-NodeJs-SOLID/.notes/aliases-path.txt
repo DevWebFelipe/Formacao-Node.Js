@@ -1,0 +1,18 @@
+- Descomentar o "module": "commonjs"
+- Descomentar o "paths": {}
+- Configurar o "paths": {},
+  "paths": {
+    "@/*": ["./src/*"]
+  },
+
+
+- Agora para importar qualquer arquivo, ao utilizar '@/' será entendido que o caminho inicial é o da pasta 'src'
+isso vai ser muito útil quando se quer pegar algo da raiz mas se está em algum lugar dentro de várias pastas
+Ex: src/Pasta1/Pasta2/Pasta3/Pasta4/Pasta5/arquivo.ts
+    src/app.ts
+
+agora dentro de 'arquivo.ts', quero importar algo de app.ts
+Sem aliases -> import { app } from '../../../../../aap'
+Com aliases -> import { app } from '@/aap'
+
+PS: Não precisa/deve usar para tudo, apenas quando houver caminhos muito distantes como o do exemplo
