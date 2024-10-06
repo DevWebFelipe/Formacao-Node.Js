@@ -1,0 +1,21 @@
+01 -> Baixar o docker
+ 1 -> https://www.docker.com/
+
+02 -> Pegar uma imagem docker pré-configurada
+ 1 -> https://hub.docker.com/
+ 2 -> pesquisar por bitnami/docker
+ 3 -> https://hub.docker.com/r/bitnami/postgresql
+
+03 -> Instalar o postgresql no docker pelo TERMINAL utilizando a imagem selecionada no DockerHub
+ 1 -> docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apisolid -p 5432:5432 bitnami/postgresql
+
+Comando -> docker run  (inicia o comando que vai rodar e criar o banco dentro do docker)
+        -> --name  (vai nomear o docker a ser criado)
+        -> -e  (indica aponta uma variável a ser setada)
+        -> -p  (indica a porta a ser setada)
+        -> 5432:5432
+          -> 1º é a porta onde o banco está rodando dentro do docker que é um ambiente isolado do localhost
+          -> 2º é a porta no localhost para onde a porta do docker deve ser direcionada
+          -> então nesse caso, a porta 5432 do docker vai apontar para a porta 5432 do localhost e vice versa 
+
+Ver todos os comandos do docker pelo terminal em commands.txt

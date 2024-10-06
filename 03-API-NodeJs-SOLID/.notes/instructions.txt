@@ -50,3 +50,7 @@
  04 -> Criar um model e rodar ('commands TERMINAL 05')
  05 -> conferir em 'node_modules/prisma/client/index.d.ts' se criou o model da tabela criada
  06 -> ('install-packages 009') Instalar para poder começar a trabalhar com o prisma
+
+014 -> Instalar o 'docker'
+ 01 -> Toda a configuração do docker em 'install-docker.txt'
+015 -> Após instalar e configurar o docker, para testar, rodar ('commands ')
