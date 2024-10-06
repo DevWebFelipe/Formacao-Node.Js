@@ -5,6 +5,8 @@ scripts
   03 - rodar server prod -> "start": "node build/server.js"
 
 *** TERMINAL ***
-  01 - rodar server dev  -> npm run start:dev
-  02 - converter para JS -> npm rum build
-  03 - rodar server prod -> npm run start
+  01 - rodar server dev        -> npm run start:dev
+  02 - converter para JS       -> npm rum build
+  03 - rodar server prod       -> npm run start
+  04 - listar comandos prisma  -> npx prisma -h
+  05 - gerar tabela com prisma -> npx prisma generate

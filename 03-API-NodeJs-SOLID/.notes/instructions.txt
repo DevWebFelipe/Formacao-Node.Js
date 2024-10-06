@@ -32,13 +32,21 @@
   1 -> Adicionar a variável 'NODE_ENV=dev'
  02 -> Criar um arquivo '.env.example' (não adicionar no .gitignore) (informar valores fictícios como exemplos)
   1 -> Adicionar a variável 'NODE_ENV=dev'
- 03 -> ('install-package 005) Instalar biblioteca que vai carregar as variáveis de ambiente
+ 03 -> ('install-packages 005) Instalar biblioteca que vai carregar as variáveis de ambiente
  04 -> Criar pasta 'src/env'
  05 -> Criar aquivo 'src/env/index.ts'
- 06 -> ('install-package 006) Instalar a biblioteca zod
+ 06 -> ('install-packages 006) Instalar a biblioteca zod
   1 -> Restante da configuração em 'configure-variables.txt'
 
 011 -> Configurar o ESLint, como é feito 1 vez só por projeto, toda a config está no 'configure-ESLint.txt'
 
 012 -> Configurar aliasses para importação de arquivos
  01 -> Dentro de 'tsconfig.json' fazer as seguintes configurações ('aliases-path.txt')
+
+013 -> ('install-packages 007) Instalar o 'prisma' para gerenciar o banco de dados, sql, alterações em tabelas etc...
+ 01 -> ('install-packages 008) Iniciar o 'prisma'
+ 02 -> Caso ainda não tenha, precisa instalar a extensão do prisma no VSCode
+ 03 -> Conferir se nas 'settings.json' do 'user' tem "[prisma]": {"editor.formatOnSave": true}
+ 04 -> Criar um model e rodar ('commands TERMINAL 05')
+ 05 -> conferir em 'node_modules/prisma/client/index.d.ts' se criou o model da tabela criada
+ 06 -> ('install-packages 009') Instalar para poder começar a trabalhar com o prisma

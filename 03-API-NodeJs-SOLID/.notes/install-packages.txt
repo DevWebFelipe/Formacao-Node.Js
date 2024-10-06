@@ -1,6 +1,11 @@
-001 - iniciar um projeto node      -> 'npm initi -y'
-002 - instalar bibliotecas básicas -> 'npm i typescript @types/node tsx tsup -D'
-003 - iniciar um projeto ts        -> 'npx tsc --init'
-004 - instalar o fastify           -> 'npm i fastify'
-005 - carregar var de ambiente     -> 'npm i dotenv'
-006 - instalar o zod               -> 'npm i zod'
+-D indica que é uma dependência de desenvolvimento
+
+001 - iniciar um projeto node          -> 'npm initi -y'
+002 - instalar bibliotecas básicas     -> 'npm i typescript @types/node tsx tsup -D'
+003 - iniciar um projeto ts            -> 'npx tsc --init'
+004 - instalar o fastify               -> 'npm i fastify'
+005 - carregar var de ambiente         -> 'npm i dotenv'
+006 - instalar o zod                   -> 'npm i zod'
+007 - instalar o prisma                -> 'npm i prisma -D'
+008 - iniciar o prisma                 -> 'npx prisma init'
+009 - instalar gerenciamento do prisma -> 'npm i @prisma/client'
