@@ -19,3 +19,5 @@ Comando -> docker run  (inicia o comando que vai rodar e criar o banco dentro do
           -> então nesse caso, a porta 5432 do docker vai apontar para a porta 5432 do localhost e vice versa 
 
 Ver todos os comandos do docker pelo terminal em commands.txt
+
+# -> DATABASE_URL="postgresql://postgres:root@localhost:5432/apisolid"

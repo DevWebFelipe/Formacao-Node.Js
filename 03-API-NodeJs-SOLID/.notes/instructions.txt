@@ -53,4 +53,5 @@
 
 014 -> Instalar o 'docker'
  01 -> Toda a configuração do docker em 'install-docker.txt'
-015 -> Após instalar e configurar o docker, para testar, rodar ('commands ')
+ 02 -> Após instalar e configurar o docker, para testar, rodar ('commands ')
+ 03 -> Após testar, configurar o 'docker-compose.yml'

@@ -21,3 +21,6 @@ scripts
   12 - manter os logs assistidos                -> docker logs 7b72ea76a514 -f
   13 - testar docker                            -> npx prisma migrate dev
   14 - gerenciador do banco com prisma          -> npx prisma studio
+  15 - subir todos os docker usando compose     -> docker compose up -D
+  16 - para todos os docker usando compose      -> docker compose stop
+   1 - deletar todos os docker usando compose   -> docker compose down
