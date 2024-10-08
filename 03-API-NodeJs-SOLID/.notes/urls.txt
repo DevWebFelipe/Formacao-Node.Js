@@ -1,2 +1,5 @@
 prisma -> gerenciamento de banco (sql etc...)
 https://www.prisma.io/
+
+Doc controllers
+https://docs.nestjs.com/controllers

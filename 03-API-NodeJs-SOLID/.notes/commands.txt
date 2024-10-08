@@ -10,6 +10,7 @@ scripts
   03 - rodar server prod                        -> npm run start
   04 - listar comandos prisma                   -> npx prisma -h
   05 - gerar tabela com prisma                  -> npx prisma generate
+
   06 - ver todos os containners rodando agora   -> docker ps
   07 - ver todos os containners já criados      -> docker ps -a
   08 - executar um container específico p/ id   -> docker start 7b72ea76a514
@@ -19,8 +20,11 @@ scripts
   10 - apagar um container específico p/ id     -> docker rm 7b72ea76a514
   11 - visuzliaar os logs                       -> docker logs 7b72ea76a514
   12 - manter os logs assistidos                -> docker logs 7b72ea76a514 -f
+  
   13 - testar docker                            -> npx prisma migrate dev
   14 - gerenciador do banco com prisma          -> npx prisma studio
+  
   15 - subir todos os docker usando compose     -> docker compose up -D
-  16 - para todos os docker usando compose      -> docker compose stop
+  16 - para todos os docker usando compose      -> docker compose start
+  17 - para todos os docker usando compose      -> docker compose stop
    1 - deletar todos os docker usando compose   -> docker compose down
