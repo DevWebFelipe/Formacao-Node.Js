@@ -9,3 +9,7 @@
 007 - instalar o prisma                -> 'npm i prisma -D'
 008 - iniciar o prisma                 -> 'npx prisma init'
 009 - instalar gerenciamento do prisma -> 'npm i @prisma/client'
+
+
+010 - instalar incriptação             -> 'npm i bcryptjs'
+  1 - instalar types para usar         -> 'npm i -D @types/bcryptjs'
